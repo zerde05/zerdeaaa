@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Турлар — Жолсапар</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="index.html">Жолсапар</a>
+  <nav>
+    <a href="index.html">Басты бет</a>
+    <a href="tours.html" class="on">Турлар</a>
+    <a href="about.html">Біз туралы</a>
+    <a href="contact.html">Байланыс</a>
+  </nav>
+</div></header>
+
+<div class="page-title"><div class="wrap">
+  <h1>Турлар</h1>
+  <p>Картаны басып, бағыт туралы толық біліңіз.</p>
+</div></div>
+
+<section><div class="wrap"><div class="grid">
+  <article class="card click" tabindex="0" role="button" data-tour="altai"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600" alt="Алтай таулары" loading="lazy"><div><h3>Алтай таулары</h3><p>Таулы жолдар, көлдер, таза ауа.</p><span class="price">от 180 000 ₸</span></div></article>
+  <article class="card click" tabindex="0" role="button" data-tour="kolsay"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Көлсай көлдері" loading="lazy"><div><h3>Көлсай көлдері</h3><p>3 күн · табиғат пен палатка.</p><span class="price">от 95 000 ₸</span></div></article>
+  <article class="card click" tabindex="0" role="button" data-tour="istanbul"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600" alt="Стамбул" loading="lazy"><div><h3>Стамбул</h3><p>Тарих пен шопинг.</p><span class="price">от 320 000 ₸</span></div></article>
+  <article class="card click" tabindex="0" role="button" data-tour="paris"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600" alt="Париж" loading="lazy"><div><h3>Париж</h3><p>Эйфель мұнарасы және мұражайлар.</p><span class="price">от 560 000 ₸</span></div></article>
+  <article class="card click" tabindex="0" role="button" data-tour="maldives"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Мальдив аралдары" loading="lazy"><div><h3>Мальдив аралдары</h3><p>Теңіз бойындағы демалыс.</p><span class="price">от 780 000 ₸</span></div></article>
+  <article class="card click" tabindex="0" role="button" data-tour="japan"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600" alt="Жапония" loading="lazy"><div><h3>Жапония</h3><p>Токио мен Киото, 9 күн.</p><span class="price">от 890 000 ₸</span></div></article>
+</div></div></section>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <img id="dimg" src="" alt="">
+  <div class="dbody">
+    <h2 id="dt"></h2>
+    <p id="dd" class="lead"></p>
+    <h3>Негізгі көрікті жерлер</h3>
+    <ul id="dl"></ul>
+    <p class="meta" id="dm"></p>
+    <div class="dbtn">
+      <a class="btn dark" href="contact.html">Тапсырыс беру</a>
+      <button class="btn" id="dx" type="button">Жабу</button>
+    </div>
+  </div>
+</dialog>
+
+<footer><div class="wrap">© 2026 Жолсапар туристік агенттігі · Алматы, Абай даңғылы 10 · +7 700 123 45 67</div></footer>
+
+<script>
+const tours = {
+  altai: {name:"Алтай таулары", img:"https://images.unsplash.com/photo-1519681393784-d120267933ba?w=900",
+    desc:"Шығыс Қазақстанның таулы аймағы: қылқан жапырақты ормандар, мұздай өзендер және таза ауа.",
+    spots:["Катон-Қарағай ұлттық паркі","Рахмановские ключи","Берел қорымы"],
+    meta:"5 күн · жеке гид · көлік және қонақ үй кіреді"},
+  kolsay: {name:"Көлсай көлдері", img:"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900",
+    desc:"Тянь-Шань баурайындағы үш көл. Табиғатты сүйетіндерге арналған тыныш бағыт.",
+    spots:["Бірінші, Екінші және Үшінші Көлсай","Қайыңды көлі","Шарын шатқалы"],
+    meta:"3 күн · палатка жалға беріледі · гид бар"},
+  istanbul: {name:"Стамбул", img:"https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=900",
+    desc:"Еуропа мен Азияны жалғайтын қала. Тарихи ескерткіштер, дәмді тағамдар және шопинг.",
+    spots:["Айя-София","Көгілдір мешіт","Топқапы сарайы","Үлкен базар","Босфор бойымен круиз"],
+    meta:"7 күн · ұшақ билеті және қонақ үй кіреді"},
+  paris: {name:"Париж", img:"https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900",
+    desc:"Өнер, сәулет және кафелер қаласы. Бірінші рет баратындарға ыңғайлы бағыт.",
+    spots:["Эйфель мұнарасы","Лувр мұражайы","Нотр-Дам соборы","Монмартр шоқысы"],
+    meta:"6 күн · виза көмегі · экскурсиялар кіреді"},
+  maldives: {name:"Мальдив аралдары", img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900",
+    desc:"Мөлдір теңіз және ақ құмды жағажайлар. Толық демалысқа арналған тур.",
+    spots:["Маржан рифтері","Шнорклинг","Жеке жағажай","Күн батқандағы круиз"],
+    meta:"8 күн · барлығы кіреді · трансфер бар"},
+  japan: {name:"Жапония", img:"https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900",
+    desc:"Заманауи қалалар мен дәстүрлі храмдар бір сапарда.",
+    spots:["Токио: Сенсо-джи және Шибуя","Киото: Фусими Инари храмы","Фудзи тауы","Осака қамалы"],
+    meta:"9 күн · гид және жүрдек пойыз билеті кіреді"}
+};
+
+const dlg = document.getElementById("dlg");
+
+function openTour(id){
+  const t = tours[id];
+  document.getElementById("dimg").src = t.img;
+  document.getElementById("dimg").alt = t.name;
+  document.getElementById("dt").textContent = t.name;
+  document.getElementById("dd").textContent = t.desc;
+  document.getElementById("dm").textContent = t.meta;
+  document.getElementById("dl").innerHTML = t.spots.map(s => "<li>" + s + "</li>").join("");
+  dlg.showModal();
+}
+
+document.querySelectorAll(".click").forEach(card => {
+  card.addEventListener("click", () => openTour(card.dataset.tour));
+  card.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openTour(card.dataset.tour); }
+  });
+});
+
+document.getElementById("dx").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
+</html>

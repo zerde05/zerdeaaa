@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Байланыс — Жолсапар</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="index.html">Жолсапар</a>
+  <nav>
+    <a href="index.html">Басты бет</a>
+    <a href="tours.html">Турлар</a>
+    <a href="about.html">Біз туралы</a>
+    <a href="contact.html" class="on">Байланыс</a>
+  </nav>
+</div></header>
+
+<div class="page-title"><div class="wrap">
+  <h1>Байланыс</h1>
+  <p>Сұрағыңызды қалдырыңыз, 1 сағат ішінде жауап береміз.</p>
+</div></div>
+
+<section><div class="wrap two">
+  <form id="f">
+    <label for="n">Аты-жөніңіз</label><input id="n" required>
+    <label for="e">Email</label><input id="e" type="email" required>
+    <label for="d">Бағыт</label>
+    <select id="d"><option>Алтай</option><option>Стамбул</option><option>Париж</option><option>Мальдив</option><option>Жапония</option></select>
+    <label for="m">Хабарлама</label><textarea id="m" rows="4"></textarea>
+    <br><br>
+    <button class="btn dark" type="submit">Жіберу</button>
+    <p class="ok" id="ok">Рахмет! Өтінім жіберілді.</p>
+  </form>
+  <div>
+    <h2>Мекенжай</h2>
+    <p>Алматы, Абай даңғылы 10<br>+7 708 025 11 24<br>zeinzerde0@gmail.com<br>Дс–Жм: 9:00–18:00</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Жолсапар туристік агенттігі · Алматы, Абай даңғылы 10 · +7 708 025 11 24</div></footer>
+
+<script>
+document.getElementById("f").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("ok").style.display = "block";
+  this.reset();
+});
+</script>
+</body>
+</html>
